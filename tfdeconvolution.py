@@ -19,7 +19,7 @@ if __name__ == '__main__':
     imgio.imsave('base.png', img_base)
 
     # building the blur kernel
-    kernel = numpy.zeros([p_ksize, p_ksize, 3, 3])
+    kernel = numpy.zeros([p_ksize, p_ksize, 3, 3])  # 3 channels in -> 3 channels out
     for c in range(0, 3):
         for xy in range(0, p_ksize):
             kernel[xy, xy, c, c] = 1.0 / p_ksize
